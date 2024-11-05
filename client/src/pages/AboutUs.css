@@ -1,0 +1,56 @@
+.aboutus {
+    padding: 50px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .aboutus-header h1 {
+    font-size: 3rem;
+    color: #f5c518;
+    margin-bottom: 10px;
+  }
+  
+  .aboutus-header p {
+    font-size: 1.2rem;
+    color: #dcdcdc;
+  }
+  
+  .aboutus-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .aboutus-card {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .aboutus-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .aboutus-icon {
+    font-size: 2.5rem;
+    color: #f5c518;
+    margin-bottom: 10px;
+  }
+  
+  .aboutus-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .aboutus-card p {
+    font-size: 1rem;
+    color: #dcdcdc;
+  }
+  
