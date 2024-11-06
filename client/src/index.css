@@ -556,9 +556,9 @@ color: #00300f;
   background: radial-gradient(at 30% 20%, rgb(19, 255, 30) 10%, rgb(0, 71, 12) 40%),
             radial-gradient(at 20% 30%, rgb(0, 63, 10) 0%, rgb(0, 44, 7) 80%);
 
-  animation: meshAnimation 12s linear infinite;
+  animation: meshAnimation 10s linear infinite;
   z-index: -1;
-  filter: blur(20px);
+  filter: blur(8px);
 }
 
 @keyframes meshAnimation {
