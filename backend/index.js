@@ -14,6 +14,7 @@ app.use(cookieParser());
 // CORS Configuration
 const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Use environment variable for frontend URL in production
+  console.log(process.env.FRONTEND_URL);
  // credentials: true,
 };
 app.use(cors(corsOptions));
