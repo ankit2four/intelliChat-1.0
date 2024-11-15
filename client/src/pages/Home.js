@@ -129,7 +129,7 @@ function Home() {
             <p>"This website is created for hassle free User Experience, I tried my best to make it as minimalistic as I can. Thank you."</p>
             <span>- Ankit Singh, IntelliChat Developer</span>
           </motion.div>
-          {testimonials.map((testimonial) => (
+          {testimonials && testimonials.map((testimonial) => (
             <motion.div
               key={testimonial._id}
               className="testimonial"
