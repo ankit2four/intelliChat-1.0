@@ -41,7 +41,9 @@ app.use('/', (req, res)=> {
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/chat', require('./routes/chatRoutes'));
 app.use('/api/user', require('./routes/userRoutes'));
-app.use('/api/testimonials', require('./routes/testimonialRoutes'));
+app.use('/api/testimonials', (req, res)=> {
+  res.json({ message: "this is from testimonials"});
+}); // require('./routes/testimonialRoutes'));
 
 // Start HTTP server
 const PORT = process.env.PORT || 3000;
