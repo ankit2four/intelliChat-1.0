@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "https://intelli-chat-j74bn53q1-ankit2fours-projects.vercel.app" },
@@ -9,18 +9,5 @@
         { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" }
       ]
     }
-  ],
-
-  "builds":[
-    {
-      "src": "./index.js",
-    }
-  ],
-  
-  "routes":[
-  {
-    "src": "/(.*)",
-    "des": "/",
-  }
   ]
 }
