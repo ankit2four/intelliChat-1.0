@@ -14,7 +14,9 @@ app.use(cookieParser());
  // credentials: true,
 // CORS Configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Use environment variable for frontend URL in production
+ 
+  origin: 'https://intelli-chat-1-0-68aw.vercel.app', // Use environment variable for frontend URL in production
+  credentials: true,
  
 };
 app.use(cors(corsOptions));
