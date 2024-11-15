@@ -45,7 +45,8 @@ app.use('/api/testimonials', require('./routes/testimonialRoutes'));
 });
 app.use('/test', (req, res)=> {
   res.json({ message: "testing"});
-});*/
+});
+*/
 
 // Start HTTP server
 const PORT = process.env.PORT || 3000;
