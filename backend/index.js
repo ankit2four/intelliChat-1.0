@@ -35,6 +35,9 @@ app.use(
 );
 
 // Routes
+app.use('/', (req, res)=> {
+  res.json({ message: "server is running for testing"});
+});
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/chat', require('./routes/chatRoutes'));
 app.use('/api/user', require('./routes/userRoutes'));
