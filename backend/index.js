@@ -36,14 +36,14 @@ app.use(
 );
 
 // Routes
-
+app.use('/test', (req, res)=> {
+  res.json({ message: "testing"});
+});
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/chat', require('./routes/chatRoutes'));
 app.use('/api/user', require('./routes/userRoutes'));
 app.use('/api/testimonials', require('./routes/testimonialRoutes'));
-app.use('/test', (req, res)=> {
-  res.json({ message: "testing"});
-});
+
 app.use('/', (req, res)=> {
   res.json({ message: "server is running for testing"});
 });
