@@ -35,10 +35,10 @@ app.use(
 );
 
 // Routes
-app.use('/test', (req, res)=> {
+app.use('/', (req, res)=> {
   res.json({ message: "server is running for testing"});
 });
-app.use('/', (req, res)=> {
+app.use('/test', (req, res)=> {
   res.json({ message: "testing"});
 });
 app.use('/api/auth', require('./routes/authRoutes'));
