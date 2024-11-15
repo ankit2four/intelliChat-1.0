@@ -44,7 +44,7 @@ app.use('/api/user', require('./routes/userRoutes'));
 app.use('/api/testimonials', require('./routes/testimonialRoutes'));
 
 // Start HTTP server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
