@@ -32,9 +32,9 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: true,//process.env.NODE_ENV === 'production',  // Set secure cookies in production
+      secure: process.env.NODE_ENV === 'production',  // Set secure cookies in production
       httpOnly: true,
-      sameSite: 'Strict',
+      sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
     },
   })
 );
