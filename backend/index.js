@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const MongoStore = require('connect-mongo');
+
 
 dotenv.config();
 const app = express();
@@ -31,7 +33,12 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URI, // Use the same MongoDB connection URI
+      ttl: 14 * 24 * 60 * 60, // Session expiration time in seconds (14 days)
+    }),
     cookie: {
+     maxAge: 1000 * 60 * 60 * 24,
       secure: 'true', // process.env.NODE_ENV === 'production',  // Set secure cookies in production
       httpOnly: true,
       sameSite: 'None',//process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
