@@ -29,7 +29,7 @@ exports.registerUser = async (req, res) => {
       email: user.email,
     };
 
-    res.status(200).json({ message: 'Registered successfully',ses:req.session.uses });
+    res.status(200).json({ message: 'Registered successfully' });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
@@ -65,7 +65,7 @@ await req.session.save((err) => {
 });
 
 
-    res.status(200).json({ message: 'Logged in successfully' });
+    res.status(200).json({ message: 'Logged in successfully',ses:req.session.uses });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server error');
