@@ -58,6 +58,12 @@ exports.loginUser = async (req, res) => {
       name: user.name,
       email: user.email,
     };
+await req.session.save((err) => {
+  if (err) {
+    console.error('Session save error:', err);
+  }
+});
+
 
     res.status(200).json({ message: 'Logged in successfully' });
   } catch (err) {
