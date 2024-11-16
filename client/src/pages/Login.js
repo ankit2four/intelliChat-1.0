@@ -54,7 +54,7 @@ const Login = () => {
         withCredentials: true,
       });
 
-      console.log(res.data); // Log response for debugging
+      console.log(res); // Log response for debugging
 
       if (res.data.message) {
         navigate('/chat');
