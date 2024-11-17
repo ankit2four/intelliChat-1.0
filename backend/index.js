@@ -42,7 +42,6 @@ app.use(
       secure: 'true', // process.env.NODE_ENV === 'production',  // Set secure cookies in production
       httpOnly: true,
       sameSite: 'None',//process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
-     domain:'.vercel.app',
     },
   })
 );
