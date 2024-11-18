@@ -369,8 +369,9 @@ code {
 
 .input-area {
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 12px;
   margin-right: 10px;
+  margin-bottom: 4px;
   display: flex;
   padding: 0px;
   width: 100%;
