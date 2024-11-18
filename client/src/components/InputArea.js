@@ -5,6 +5,7 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
   const [input, setInput] = useState('');
   const textareaRef = useRef(null);
   const [isGenerating, setGenerate] =useState(false);
+  const [isError, setError] = useState(false);
 
   const API_URL = process.env.REACT_APP_API_URL;
   //console.log("inputArea");
@@ -49,6 +50,7 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
       
       scrollToBottom();
     } catch (err) {
+      setError(true);
       console.error('Failed to send message:', err);
     }
   };
@@ -65,7 +67,7 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
   
   return (
     <>
-    { isGenerating && (
+    { isError? (<div>Sorry, Failed to generate<div>) : isGenerating && (
                            <>
                              
                             <div>
