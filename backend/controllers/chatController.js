@@ -12,7 +12,7 @@ const generateChatTitle = async (message) => {
       throw new Error("Message is undefined or empty");
     }
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-8b' });
     const chatSession = model.startChat({
       history: [
         {
@@ -89,7 +89,7 @@ exports.addMessage = async (req, res) => {
     if (!chatId) {
       // No chatId provided, generate title with AI and create a new chat
       const title = await generateChatTitle(message)|| "New Chat";
-      console.log("hello mtf: " + title);
+     
       chat = new Chat({
         user: req.user.id,
         title,
@@ -114,7 +114,7 @@ exports.addMessage = async (req, res) => {
       parts: [{ text: msg.message }],
     }));
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-8b' });
     const chatSession = model.startChat({
       history: [...chatHistory, {
         role: 'user',
