@@ -10,10 +10,8 @@ const MongoStore = require('connect-mongo');
 dotenv.config();
 const app = express();
 connectDB();
-app.set('trust proxy', 1);
+//app.set('trust proxy', 1);
 app.use(cookieParser());
- console.log(process.env.FRONTEND_URL || "nothing");
- // credentials: true,
 // CORS Configuration
 const corsOptions = {
  
