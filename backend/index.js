@@ -17,7 +17,7 @@ app.use(cookieParser());
 // CORS Configuration
 const corsOptions = {
  
-  origin: 'https://intelli-chat-1-0-68aw.vercel.app', // Use environment variable for frontend URL in production
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000', // Use environment variable for frontend URL in production
   credentials: true,
  
 };
@@ -39,9 +39,9 @@ app.use(
     }),
     cookie: {
      maxAge: 1000 * 60 * 60 * 24,
-      secure: 'true', // process.env.NODE_ENV === 'production',  // Set secure cookies in production
+      secure: process.env.NODE_ENV === 'production',  // Set secure cookies in production
       httpOnly: true,
-      sameSite: 'None',//process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
+      sameSite: process.env.NODE_ENV === 'production' ? 'None' : 'Lax',
     },
   })
 );
