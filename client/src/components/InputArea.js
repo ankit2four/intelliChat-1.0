@@ -67,7 +67,7 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
   
   return (
     <>
-    { isError? (<div>Sorry, Failed to generate<div>) : isGenerating && (
+    { isError? (<div> Sorry, Failed to generate </div>) : isGenerating && (
                            <>
                              
                             <div>
