@@ -21,7 +21,21 @@ const PrivateRoute = ({ children }) => {
   }, [API_URL]);
 
   if (isAuthenticated === null) {
-    return <div>Loading...</div>; // Optional: Loading state while checking auth
+    return 
+<div class="spinner">
+  <div></div>   
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>    
+  <div></div>  
+  Loading...
+</div>
+ // Optional: Loading state while checking auth
   }
 
   return isAuthenticated ? children : <Navigate to="/login" />;
