@@ -92,11 +92,6 @@ function Chat() {
 
 
 
-  const userInitial = username ? username[0] : '@';
-  const handleShowProfile = () => {
-    setShowProfileMenu(true);
-    setTimeout(setShowProfileMenu(false), 3000);
-  };
 
   return (
     <>
@@ -122,7 +117,7 @@ function Chat() {
                   <li className="profile-item" onClick={handleLogout}>Logout</li>
                 </ul>
               )}
-              <button onClick={handleShowProfile()}>
+              <button onClick={() => setShowProfileMenu(!showProfileMenu)}>
                 {userInitial}
               </button>
             </div>
