@@ -118,7 +118,7 @@ function Chat() {
                   <li className="profile-item" onClick={handleLogout}>Logout</li>
                 </ul>
               )}
-              <button onClick={setTimeout(() => setShowProfileMenu(!showProfileMenu), 3000)}>
+              <button onClick={() => setShowProfileMenu(!showProfileMenu)}>
                 {userInitial}
               </button>
             </div>
