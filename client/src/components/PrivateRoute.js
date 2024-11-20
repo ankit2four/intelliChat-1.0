@@ -33,8 +33,7 @@ const PrivateRoute = ({ children }) => {
   <div></div>    
   <div></div>    
   <div></div>  
-  Loading...
-</div>
+</div>;
  // Optional: Loading state while checking auth
   }
 
