@@ -21,19 +21,20 @@ const PrivateRoute = ({ children }) => {
   }, [API_URL]);
 
   if (isAuthenticated === null) {
-    return 
-<div class="spinner">
-  <div></div>   
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>    
-  <div></div>  
-</div>;
+    return<div className='loader'>
+    <div class="spinner">
+      <div></div>   
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+    </div>
+    </div>; 
  // Optional: Loading state while checking auth
   }
 
