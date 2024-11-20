@@ -92,6 +92,7 @@ function Chat() {
 
 
 
+  const userInitial = username ? username[0] : '@';
 
   return (
     <>
@@ -117,7 +118,7 @@ function Chat() {
                   <li className="profile-item" onClick={handleLogout}>Logout</li>
                 </ul>
               )}
-              <button onClick={() => setShowProfileMenu(!showProfileMenu)}>
+              <button onClick={setTimeout(() => setShowProfileMenu(!showProfileMenu), 3000)}>
                 {userInitial}
               </button>
             </div>
