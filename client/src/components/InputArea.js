@@ -68,14 +68,20 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
   return (
     <>
     { isError? (<div> Sorry, Failed to generate </div>) : isGenerating && (
-                           <>
-                             
-                            <div>
-                                Generating....
-                            </div>
-                           </>
-                )
-                }
+    <>
+    <div>
+    Generating
+    <div class="loading-wave">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
+    </div>
+    </div>
+    </>
+    )
+    }
     <form onSubmit={handleSubmit} className="input-area">
       <textarea
       name = 'input'
