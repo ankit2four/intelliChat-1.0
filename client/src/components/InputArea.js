@@ -70,7 +70,6 @@ function InputArea({ selectedChatId={selectedChatId}, setMessages={setMessages},
     { isError? (<div> Sorry, Failed to generate </div>) : isGenerating && (
     <>
     <div>
-    Generating
     <div class="loading-wave">
     <div class="loading-bar"></div>
     <div class="loading-bar"></div>
