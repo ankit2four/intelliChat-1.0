@@ -875,7 +875,12 @@ color: #00300f;
   }
 }
 
-/* From Uiverse.io by PriyanshuGupta28 */ 
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .spinner {
   position: absolute;
   width: 9px;
@@ -886,7 +891,7 @@ color: #00300f;
   position: absolute;
   width: 50%;
   height: 150%;
-  background: #2a7456;
+  background: #029f0f;
   transform: rotate(calc(var(--rotation) * 1deg)) translate(0, calc(var(--translation) * 1%));
   animation: spinner-fzua35 1s calc(var(--delay) * 1s) infinite ease;
 }
