@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Sidebar({ setSelectedChatId, chats }) {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
     //console.log("from Sidebar");
 
     const toggleSidebar = () => {
