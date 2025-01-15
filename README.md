@@ -1,4 +1,4 @@
-# IntelliChat 1.0 ([visit app](https://intelli-chat-1-0-68aw.vercel.app/login))
+# IntelliChat 1.0 ([visit app](https://intelli-chat-1-0-68aw.vercel.app/))
 
 IntelliChat is an AI-powered chat application designed to provide a seamless and intelligent conversational experience. The application allows users to register, log in, and engage in natural conversations, with features that facilitate content creation, brainstorming, language translation, and learning support.
 
